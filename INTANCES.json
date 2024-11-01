@@ -1,0 +1,43 @@
+{
+    "esxi": {
+        "host": "192.168.1.10",
+        "user": "root",
+        "password": "password",
+    },
+    "datastore": "datastore1",
+    "vms": [
+        {
+            "name": "tinyVM_1",
+            "ram": 2048,
+            "cpu": {
+                "count": 1,
+                "cores_per_socket": 1
+            },
+            "disk": {
+                "size_gb": 20,
+                "type": "thin"
+            },
+            "cdrom": {
+                "iso_path": "[datastore1] emplacement/Core-5.4.iso",
+                "connect_at_power_on": true
+            },
+            "power_on": true
+        },
+        {
+            "name": "tinyVM_2",
+            "ram": 1024,
+            "cpu": {
+                "count": 1,
+                "cores_per_socket": 1
+            },
+            "disk": {
+                "size_gb": 10,
+                "type": "thin"
+            },
+            "cdrom": {
+                "iso_path": "[datastore1] emplacement/Core-5.4.iso",
+                "connect_at_power_on": true
+            }
+        }
+    ]
+}
